@@ -1,0 +1,76 @@
+crop_name,variety,price_per_kg,market,state,date,quality,source,coordinates_lat,coordinates_lng
+tomato,hybrid,40,Hyderabad,Telangana,2024-01-15,premium,agmarknet,17.3850,78.4867
+onion,red,30,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+chili,green,100,Hyderabad,Telangana,2024-01-15,premium,agmarknet,17.3850,78.4867
+potato,local,25,Hyderabad,Telangana,2024-01-15,standard,manual,17.3850,78.4867
+carrot,orange,35,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+cabbage,green,20,Hyderabad,Telangana,2024-01-15,standard,manual,17.3850,78.4867
+cauliflower,white,45,Hyderabad,Telangana,2024-01-15,premium,agmarknet,17.3850,78.4867
+brinjal,purple,28,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+okra,green,60,Hyderabad,Telangana,2024-01-15,premium,manual,17.3850,78.4867
+cucumber,green,22,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+tomato,cherry,55,Mumbai,Maharashtra,2024-01-15,premium,agmarknet,19.0760,72.8777
+onion,white,32,Mumbai,Maharashtra,2024-01-15,premium,agmarknet,19.0760,72.8777
+chili,red,120,Mumbai,Maharashtra,2024-01-15,premium,agmarknet,19.0760,72.8777
+potato,new,28,Mumbai,Maharashtra,2024-01-15,premium,agmarknet,19.0760,72.8777
+carrot,baby,42,Mumbai,Maharashtra,2024-01-15,premium,manual,19.0760,72.8777
+cabbage,purple,25,Mumbai,Maharashtra,2024-01-15,standard,agmarknet,19.0760,72.8777
+cauliflower,organic,65,Mumbai,Maharashtra,2024-01-15,premium,manual,19.0760,72.8777
+brinjal,long,35,Mumbai,Maharashtra,2024-01-15,premium,agmarknet,19.0760,72.8777
+okra,tender,75,Mumbai,Maharashtra,2024-01-15,premium,agmarknet,19.0760,72.8777
+cucumber,english,38,Mumbai,Maharashtra,2024-01-15,premium,manual,19.0760,72.8777
+tomato,desi,35,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+onion,nashik,28,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+chili,kashmiri,150,Delhi,Delhi,2024-01-15,premium,manual,28.7041,77.1025
+potato,punjabi,22,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+carrot,red,30,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+cabbage,winter,18,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+cauliflower,snowball,40,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+brinjal,round,25,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+okra,hybrid,55,Delhi,Delhi,2024-01-15,standard,manual,28.7041,77.1025
+cucumber,local,20,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+tomato,cluster,48,Bangalore,Karnataka,2024-01-15,premium,agmarknet,12.9716,77.5946
+onion,bellary,35,Bangalore,Karnataka,2024-01-15,premium,agmarknet,12.9716,77.5946
+chili,byadgi,180,Bangalore,Karnataka,2024-01-15,premium,manual,12.9716,77.5946
+potato,hassan,30,Bangalore,Karnataka,2024-01-15,premium,agmarknet,12.9716,77.5946
+carrot,ooty,45,Bangalore,Karnataka,2024-01-15,premium,manual,12.9716,77.5946
+cabbage,hopcoms,22,Bangalore,Karnataka,2024-01-15,standard,agmarknet,12.9716,77.5946
+cauliflower,mysore,50,Bangalore,Karnataka,2024-01-15,premium,agmarknet,12.9716,77.5946
+brinjal,bangalore,32,Bangalore,Karnataka,2024-01-15,premium,agmarknet,12.9716,77.5946
+okra,dharwad,68,Bangalore,Karnataka,2024-01-15,premium,manual,12.9716,77.5946
+cucumber,hybrid,28,Bangalore,Karnataka,2024-01-15,standard,agmarknet,12.9716,77.5946
+tomato,local,38,Chennai,Tamil Nadu,2024-01-15,standard,agmarknet,13.0827,80.2707
+onion,sambar,33,Chennai,Tamil Nadu,2024-01-15,standard,agmarknet,13.0827,80.2707
+chili,guntur,110,Chennai,Tamil Nadu,2024-01-15,premium,agmarknet,13.0827,80.2707
+potato,nilgiri,26,Chennai,Tamil Nadu,2024-01-15,standard,manual,13.0827,80.2707
+carrot,kodai,40,Chennai,Tamil Nadu,2024-01-15,premium,manual,13.0827,80.2707
+cabbage,ooty,24,Chennai,Tamil Nadu,2024-01-15,standard,agmarknet,13.0827,80.2707
+cauliflower,kodai,55,Chennai,Tamil Nadu,2024-01-15,premium,manual,13.0827,80.2707
+brinjal,kathirikai,30,Chennai,Tamil Nadu,2024-01-15,standard,agmarknet,13.0827,80.2707
+okra,vendakkai,65,Chennai,Tamil Nadu,2024-01-15,premium,agmarknet,13.0827,80.2707
+cucumber,vellarikkai,25,Chennai,Tamil Nadu,2024-01-15,standard,agmarknet,13.0827,80.2707
+rice,basmati,85,Hyderabad,Telangana,2024-01-15,premium,agmarknet,17.3850,78.4867
+wheat,durum,45,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+maize,yellow,35,Hyderabad,Telangana,2024-01-15,standard,manual,17.3850,78.4867
+cotton,desi,5500,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+sugarcane,co86032,280,Hyderabad,Telangana,2024-01-15,standard,manual,17.3850,78.4867
+turmeric,salem,12000,Hyderabad,Telangana,2024-01-15,premium,agmarknet,17.3850,78.4867
+coriander,seed,8500,Hyderabad,Telangana,2024-01-15,premium,manual,17.3850,78.4867
+cumin,rajasthan,25000,Hyderabad,Telangana,2024-01-15,premium,agmarknet,17.3850,78.4867
+fenugreek,kasuri,15000,Hyderabad,Telangana,2024-01-15,premium,manual,17.3850,78.4867
+mustard,seed,6500,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+groundnut,bold,7200,Hyderabad,Telangana,2024-01-15,premium,agmarknet,17.3850,78.4867
+sesame,white,12500,Hyderabad,Telangana,2024-01-15,premium,manual,17.3850,78.4867
+sunflower,seed,5800,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+safflower,seed,6200,Hyderabad,Telangana,2024-01-15,standard,manual,17.3850,78.4867
+castor,seed,5200,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867
+mango,alphonso,120,Mumbai,Maharashtra,2024-01-15,premium,manual,19.0760,72.8777
+banana,robusta,45,Mumbai,Maharashtra,2024-01-15,standard,agmarknet,19.0760,72.8777
+apple,kashmir,180,Delhi,Delhi,2024-01-15,premium,manual,28.7041,77.1025
+orange,nagpur,65,Mumbai,Maharashtra,2024-01-15,premium,agmarknet,19.0760,72.8777
+grapes,thompson,85,Mumbai,Maharashtra,2024-01-15,premium,manual,19.0760,72.8777
+pomegranate,ganesh,150,Mumbai,Maharashtra,2024-01-15,premium,agmarknet,19.0760,72.8777
+papaya,red lady,35,Bangalore,Karnataka,2024-01-15,standard,manual,12.9716,77.5946
+guava,allahabad,55,Delhi,Delhi,2024-01-15,standard,agmarknet,28.7041,77.1025
+coconut,tender,25,Chennai,Tamil Nadu,2024-01-15,standard,manual,13.0827,80.2707
+watermelon,sugar baby,18,Hyderabad,Telangana,2024-01-15,standard,agmarknet,17.3850,78.4867

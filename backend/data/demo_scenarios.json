@@ -1,0 +1,363 @@
+{
+  "scenarios": [
+    {
+      "id": "scenario_1",
+      "title": "Basic Price Query - English",
+      "description": "Simple price inquiry for tomatoes in English",
+      "language": "en",
+      "steps": [
+        {
+          "step": 1,
+          "action": "voice_input",
+          "input": "What is the current price of tomatoes?",
+          "expected_response": "Current tomato prices range from ₹35-55 per kg depending on variety and market. Hybrid tomatoes in Hyderabad are ₹40/kg, while cherry tomatoes in Mumbai are ₹55/kg."
+        },
+        {
+          "step": 2,
+          "action": "follow_up",
+          "input": "Which market has the best price?",
+          "expected_response": "Delhi has the most affordable tomatoes at ₹35/kg for desi variety, while premium varieties are available in Mumbai and Bangalore."
+        }
+      ],
+      "learning_objectives": [
+        "Basic price discovery functionality",
+        "Multi-market comparison",
+        "Voice input processing"
+      ]
+    },
+    {
+      "id": "scenario_2",
+      "title": "Multilingual Price Query - Hindi",
+      "description": "Price inquiry in Hindi with translation",
+      "language": "hi",
+      "steps": [
+        {
+          "step": 1,
+          "action": "voice_input",
+          "input": "टमाटर का भाव क्या है?",
+          "expected_translation": "What is the price of tomatoes?",
+          "expected_response": "टमाटर की कीमत किस्म और बाजार के आधार पर ₹35-55 प्रति किलो है। हैदराबाद में हाइब्रिड टमाटर ₹40/किलो है।"
+        },
+        {
+          "step": 2,
+          "action": "follow_up",
+          "input": "कौन सा बाजार सबसे सस्ता है?",
+          "expected_translation": "Which market is the cheapest?",
+          "expected_response": "दिल्ली में देसी टमाटर सबसे सस्ते ₹35/किलो में मिल रहे हैं।"
+        }
+      ],
+      "learning_objectives": [
+        "Hindi language processing",
+        "Real-time translation",
+        "Cultural context preservation"
+      ]
+    },
+    {
+      "id": "scenario_3",
+      "title": "Complex Negotiation - Telugu",
+      "description": "Multi-party negotiation scenario in Telugu",
+      "language": "te",
+      "participants": [
+        {
+          "id": "vendor_1",
+          "name": "రాజు",
+          "role": "vendor",
+          "language": "te",
+          "crop": "onion",
+          "quantity": "100 kg",
+          "asking_price": 32
+        },
+        {
+          "id": "buyer_1",
+          "name": "Suresh",
+          "role": "buyer",
+          "language": "en",
+          "target_price": 28,
+          "quantity_needed": "100 kg"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "speaker": "vendor_1",
+          "input": "నేను 100 కిలోల ఉల్లిపాయలు ₹32 కిలోకు అమ్ముతాను",
+          "expected_translation": "I will sell 100 kg onions for ₹32 per kg",
+          "ai_mediation": "Current market rate for onions is ₹30-35/kg. Vendor's price is within fair range."
+        },
+        {
+          "step": 2,
+          "speaker": "buyer_1",
+          "input": "Can you do ₹28 per kg? That's my budget.",
+          "expected_translation": "మీరు కిలోకు ₹28 చేయగలరా? అది నా బడ్జెట్.",
+          "ai_mediation": "Buyer's offer is below market rate. Suggest compromise at ₹30/kg."
+        },
+        {
+          "step": 3,
+          "speaker": "ai_mediator",
+          "input": "Based on current market rates, I suggest ₹30/kg as a fair compromise. This is the standard rate in Hyderabad market.",
+          "expected_translation_te": "ప్రస్తుత మార్కెట్ రేట్ల ఆధారంగా, నేను కిలోకు ₹30 న్యాయమైన రాజీగా సూచిస్తున్నాను।",
+          "expected_outcome": "Both parties agree to ₹30/kg"
+        }
+      ],
+      "learning_objectives": [
+        "Cross-language negotiation",
+        "AI mediation capabilities",
+        "Fair price suggestions",
+        "Cultural sensitivity in negotiations"
+      ]
+    },
+    {
+      "id": "scenario_4",
+      "title": "Market Trend Analysis - Tamil",
+      "description": "Comprehensive market analysis request in Tamil",
+      "language": "ta",
+      "steps": [
+        {
+          "step": 1,
+          "action": "voice_input",
+          "input": "காய்கறி சந்தையில் இந்த வாரம் என்ன போக்கு?",
+          "expected_translation": "What is the trend in the vegetable market this week?",
+          "expected_response": "இந்த வாரம் காய்கறி விலைகள் நிலையாக உள்ளன. தக்காளி மற்றும் வெங்காயம் விலை சற்று அதிகரித்துள்ளது."
+        },
+        {
+          "step": 2,
+          "action": "follow_up",
+          "input": "எந்த காய்கறிகள் விலை குறைந்துள்ளது?",
+          "expected_translation": "Which vegetables have decreased in price?",
+          "expected_response": "உருளைக்கிழங்கு மற்றும் கோஸ் விலை கடந்த வாரத்தை விட குறைந்துள்ளது।"
+        }
+      ],
+      "learning_objectives": [
+        "Tamil language processing",
+        "Market trend analysis",
+        "Complex query handling"
+      ]
+    },
+    {
+      "id": "scenario_5",
+      "title": "Bulk Purchase Negotiation",
+      "description": "Large quantity purchase with multiple vendors",
+      "language": "en",
+      "participants": [
+        {
+          "id": "buyer_bulk",
+          "name": "Hotel Manager",
+          "role": "buyer",
+          "language": "en",
+          "requirements": {
+            "tomato": "500 kg",
+            "onion": "300 kg",
+            "potato": "400 kg"
+          }
+        },
+        {
+          "id": "vendor_multi",
+          "name": "किसान सहकारी",
+          "role": "vendor",
+          "language": "hi",
+          "available_stock": {
+            "tomato": "1000 kg",
+            "onion": "800 kg",
+            "potato": "600 kg"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "speaker": "buyer_bulk",
+          "input": "I need bulk quantities: 500kg tomatoes, 300kg onions, 400kg potatoes. What's your best price?",
+          "expected_translation": "मुझे बल्क मात्रा चाहिए: 500 किलो टमाटर, 300 किलो प्याज, 400 किलो आलू। आपका सबसे अच्छा दाम क्या है?",
+          "ai_mediation": "For bulk orders, typical discount is 5-10% below market rate."
+        },
+        {
+          "step": 2,
+          "speaker": "vendor_multi",
+          "input": "बल्क ऑर्डर के लिए मैं 5% छूट दे सकता हूं। टमाटर ₹38, प्याज ₹28, आलू ₹23 प्रति किलो।",
+          "expected_translation": "For bulk order, I can give 5% discount. Tomatoes ₹38, onions ₹28, potatoes ₹23 per kg.",
+          "ai_mediation": "Vendor's bulk pricing is competitive. Total cost would be ₹36,800 for requested quantities."
+        }
+      ],
+      "learning_objectives": [
+        "Bulk pricing calculations",
+        "Multi-item negotiations",
+        "Discount strategies",
+        "Business-to-business transactions"
+      ]
+    },
+    {
+      "id": "scenario_6",
+      "title": "Seasonal Price Comparison",
+      "description": "Understanding seasonal price variations",
+      "language": "en",
+      "steps": [
+        {
+          "step": 1,
+          "action": "query",
+          "input": "Compare mango prices across different seasons",
+          "expected_response": "Mango prices vary significantly by season. Peak season (April-June): ₹80-120/kg, Off-season: ₹200-300/kg. Alphonso variety commands premium prices."
+        },
+        {
+          "step": 2,
+          "action": "follow_up",
+          "input": "When is the best time to buy mangoes in bulk?",
+          "expected_response": "Best time for bulk mango purchase is May-June when prices are lowest and quality is highest. Avoid off-season purchases for cost efficiency."
+        }
+      ],
+      "learning_objectives": [
+        "Seasonal market understanding",
+        "Strategic purchasing decisions",
+        "Price prediction capabilities"
+      ]
+    },
+    {
+      "id": "scenario_7",
+      "title": "Quality-based Pricing",
+      "description": "Understanding price differences based on quality grades",
+      "language": "en",
+      "steps": [
+        {
+          "step": 1,
+          "action": "query",
+          "input": "What's the difference between premium and standard quality tomatoes?",
+          "expected_response": "Premium tomatoes (₹40-55/kg): Better appearance, longer shelf life, uniform size. Standard tomatoes (₹25-35/kg): Good for cooking, shorter shelf life, mixed sizes."
+        },
+        {
+          "step": 2,
+          "action": "follow_up",
+          "input": "Which quality should I choose for my restaurant?",
+          "expected_response": "For restaurants, standard quality is often sufficient for cooking dishes, while premium quality is better for salads and presentation. Consider your menu requirements and budget."
+        }
+      ],
+      "learning_objectives": [
+        "Quality grade understanding",
+        "Value-based decision making",
+        "Business application guidance"
+      ]
+    }
+  ],
+  "demo_users": [
+    {
+      "id": "demo_vendor_1",
+      "username": "राजू_किसान",
+      "email": "raju.farmer@demo.com",
+      "password": "demo123",
+      "language": "hi",
+      "role": "vendor",
+      "profile": {
+        "name": "राजू शर्मा",
+        "location": "हैदराबाद, तेलंगाना",
+        "crops": ["tomato", "onion", "chili"],
+        "experience": "15 years"
+      }
+    },
+    {
+      "id": "demo_buyer_1",
+      "username": "suresh_trader",
+      "email": "suresh.trader@demo.com",
+      "password": "demo123",
+      "language": "en",
+      "role": "buyer",
+      "profile": {
+        "name": "Suresh Kumar",
+        "location": "Mumbai, Maharashtra",
+        "business": "Wholesale Vegetable Trading",
+        "volume": "500-1000 kg/day"
+      }
+    },
+    {
+      "id": "demo_vendor_2",
+      "username": "முருகன்_விவசாயி",
+      "email": "murugan.farmer@demo.com",
+      "password": "demo123",
+      "language": "ta",
+      "role": "vendor",
+      "profile": {
+        "name": "முருகன் ராமன்",
+        "location": "சென்னை, தமிழ்நாடு",
+        "crops": ["rice", "coconut", "banana"],
+        "experience": "20 years"
+      }
+    },
+    {
+      "id": "demo_buyer_2",
+      "username": "రవి_వ్యాపారి",
+      "email": "ravi.trader@demo.com",
+      "password": "demo123",
+      "language": "te",
+      "role": "buyer",
+      "profile": {
+        "name": "రవి కుమార్",
+        "location": "హైదరాబాద్, తెలంగాణ",
+        "business": "రిటైల్ వెజిటబుల్ షాప్",
+        "volume": "100-200 kg/day"
+      }
+    }
+  ],
+  "sample_queries": {
+    "english": [
+      "What is the price of tomatoes today?",
+      "Compare onion prices across different markets",
+      "I want to buy 100 kg potatoes, what's your best price?",
+      "Show me market trends for vegetables this week",
+      "Which crops are most profitable right now?",
+      "What's the difference between premium and standard quality?"
+    ],
+    "hindi": [
+      "आज टमाटर का भाव क्या है?",
+      "प्याज की कीमत अलग-अलग मंडियों में कितनी है?",
+      "मुझे 100 किलो आलू चाहिए, आपका सबसे अच्छा दाम क्या है?",
+      "इस हफ्ते सब्जियों का बाजार कैसा है?",
+      "अभी कौन सी फसल में सबसे ज्यादा फायदा है?",
+      "प्रीमियम और स्टैंडर्ड क्वालिटी में क्या अंतर है?"
+    ],
+    "telugu": [
+      "ఈరోజు టమాటో రేట్ ఎంత?",
+      "వివిధ మార్కెట్లలో ఉల్లిపాయ ధరలు ఎంత?",
+      "నాకు 100 కిలోల బంగాళాదుంపలు కావాలి, మీ బెస్ట్ ప్రైస్ ఎంత?",
+      "ఈ వారం కూరగాయల మార్కెట్ ట్రెండ్ ఎలా ఉంది?",
+      "ఇప్పుడు ఏ పంటలో ఎక్కువ లాభం ఉంది?",
+      "ప్రీమియం మరియు స్టాండర్డ్ క్వాలిటీలో తేడా ఏమిటి?"
+    ],
+    "tamil": [
+      "இன்று தக்காளி விலை என்ன?",
+      "வெவ்வேறு சந்தைகளில் வெங்காய விலைகள் என்ன?",
+      "எனக்கு 100 கிலோ உருளைக்கிழங்கு வேண்டும், உங்கள் சிறந்த விலை என்ன?",
+      "இந்த வாரம் காய்கறி சந்தை போக்கு எப்படி உள்ளது?",
+      "இப்போது எந்த பயிரில் அதிக லாபம் உள்ளது?",
+      "பிரீமியம் மற்றும் ஸ்டாண்டர்ட் தரத்தில் என்ன வித்தியாசம்?"
+    ]
+  },
+  "negotiation_templates": [
+    {
+      "id": "basic_negotiation",
+      "title": "Basic Price Negotiation",
+      "steps": [
+        "Initial price inquiry",
+        "Counter offer",
+        "AI mediation suggestion",
+        "Final agreement"
+      ]
+    },
+    {
+      "id": "bulk_discount",
+      "title": "Bulk Purchase Discount",
+      "steps": [
+        "Quantity specification",
+        "Bulk pricing request",
+        "Discount calculation",
+        "Terms agreement"
+      ]
+    },
+    {
+      "id": "quality_negotiation",
+      "title": "Quality-based Pricing",
+      "steps": [
+        "Quality specification",
+        "Price justification",
+        "Quality verification",
+        "Premium pricing agreement"
+      ]
+    }
+  ]
+}
