@@ -206,7 +206,7 @@ const ChatInterface: React.FC = () => {
               ? { 
                   ...msg, 
                   priceData: response.data,
-                  confidence: response.data.confidence || 0.8
+                  confidence: response.data?.confidence || 0.8
                 }
               : msg
           )
@@ -217,7 +217,7 @@ const ChatInterface: React.FC = () => {
           id: 'ai-' + Date.now(),
           senderId: 'ai-assistant',
           senderName: 'AI Assistant',
-          originalText: response.data.response,
+          originalText: response.data?.response || '',
           language: language,
           timestamp: new Date(),
           messageType: 'system',

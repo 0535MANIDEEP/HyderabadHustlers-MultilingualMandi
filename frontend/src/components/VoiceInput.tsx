@@ -398,7 +398,7 @@ const VoiceInput: React.FC<VoiceInputProps> = ({
         <Box sx={{ position: 'relative' }}>
           <IconButton
             onClick={handleClick}
-            disabled={disabled || hasPermission === false}
+            disabled={disabled || hasPermission !== true}
             color={isListening ? 'secondary' : error ? 'error' : 'default'}
             size={getButtonSize()}
             sx={{

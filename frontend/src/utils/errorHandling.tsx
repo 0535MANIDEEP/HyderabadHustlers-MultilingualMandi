@@ -3,7 +3,7 @@
  * Provides error boundaries, error reporting, and user-friendly error messages
  */
 
-import { ErrorInfo, ReactNode } from 'react';
+import React, { ErrorInfo, ReactNode } from 'react';
 
 // Error types
 export interface AppError {
@@ -300,7 +300,7 @@ export const useErrorHandler = () => {
 /**
  * Utility function to create retry mechanism
  */
-export const withRetry = async <T>(
+export const withRetry = async <T,>(
   operation: () => Promise<T>,
   maxRetries: number = 3,
   delay: number = 1000

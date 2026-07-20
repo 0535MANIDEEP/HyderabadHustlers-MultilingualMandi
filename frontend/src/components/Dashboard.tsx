@@ -30,7 +30,7 @@ import ErrorNotification from './ErrorNotification';
 import apiService, { PriceData } from '../services/apiService';
 import { useErrorHandler } from '../utils/errorHandling';
 
-interface PriceDataLocal extends PriceData {
+interface PriceDataLocal extends Omit<PriceData, 'lastUpdated'> {
   lastUpdated: Date;
 }
 
