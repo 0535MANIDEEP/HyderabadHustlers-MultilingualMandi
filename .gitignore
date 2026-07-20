@@ -47,3 +47,4 @@ aws-config/
 # Testing
 test-results/
 playwright-report/
+.vercel
