@@ -58,7 +58,12 @@ class CacheService {
     };
     
     // Initialize connection
-    this.initialize();
+    if (!process.env.VERCEL) {
+      this.initialize();
+    } else {
+      this.client = this.createMockClient();
+      this.isConnected = true;
+    }
   }
 
   /**
