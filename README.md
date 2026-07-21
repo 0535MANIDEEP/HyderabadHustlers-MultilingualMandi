@@ -1,149 +1,147 @@
-# 🏆 Hyderabad Hustlers: Multilingual Mandi
+# Multilingual Mandi — AI-Powered Agricultural Marketplace
 
-[![Hackathon](https://img.shields.io/badge/hackathon-Hack2skill%202026-orange)](https://hack2skill.com)
-[![AI for Bharat](https://img.shields.io/badge/AI%20for%20Bharat-Flash%20Sprint-blue)](https://hack2skill.com)
-[![Kiro Built](https://img.shields.io/badge/Built%20with-Kiro%20AI-purple)](https://kiro.ai)
-[![Test Coverage](https://img.shields.io/badge/coverage-96.2%25-brightgreen)](https://github.com/HyderabadHustlers/MultilingualMandi)
+Multilingual marketplace platform enabling Indian agricultural vendors and buyers to communicate across language barriers with AI-powered translation, price discovery, and negotiation mediation.
 
-## 🚀 AI for Bharat Flash Sprint | 24hr Kiro Build
+## Tech Stack
 
-> **Breaking language barriers in Indian agricultural markets through AI-powered translation and intelligent price discovery**
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 18, TypeScript, Material-UI |
+| Voice | Web Speech API, React Speech Recognition |
+| Backend | Node.js, Express, Socket.io |
+| AI | AWS Bedrock (Claude 3 Sonnet) |
+| NLP | Natural, Stopword, ML-Matrix |
+| Data | CSV Parser, PapaParse |
+| Cache | Redis |
+| Auth | JWT, bcryptjs |
+| Validation | Joi |
+| Logging | Winston |
+| Security | Helmet, Express Rate Limit, Compression |
+| Testing | Jest, Supertest, Fast-check |
+| Deployment | Docker, AWS CloudFormation |
 
-## 📋 Hackathon Submission Complete
+## Features
 
-✅ **PPT submitted** to Hack2skill dashboard  
-✅ **LinkedIn post**: @Hack2skill @AWS #AIforBharat  
-✅ **Kiro proof**: /.kiro file included  
-✅ **Public repo**: Ready for judge evaluation
+### Multilingual Support
+- Real-time translation across Indian languages (Telugu, Hindi, English, and more)
+- Language detection and automatic switching
+- Agricultural terminology preservation during translation
 
-## 🚀 Quick Start
+### Price Discovery
+- RAG-based mandi pricing pipeline with vector embeddings
+- Fair price range calculation across markets
+- Trend analysis and market recommendations
+- CSV-based crop price database (75 crops, 5 markets)
+
+### AI Negotiation
+- Cross-language mediated negotiations between vendors and buyers
+- AI compromise suggestion generation
+- Conversation analysis and sentiment tracking
+- Session management with real-time messaging via WebSocket
+
+### Voice Interface
+- Voice input with speech-to-text processing
+- Multilingual voice queries for price lookups
+- Intent analysis for voice commands
+
+### Data Pipeline
+- Semantic search over agricultural data
+- Vector embeddings for crop similarity
+- Query standardization across languages
+
+## Architecture
+
+```
+multilingual-mandi/
+├── frontend/                  # React + TypeScript + MUI
+│   └── src/
+│       ├── components/        # Dashboard, ChatInterface, Header
+│       ├── contexts/          # LanguageContext, SocketContext
+│       ├── services/          # API service layer
+│       └── utils/             # Voice processing, error handling
+├── backend/                   # Node.js + Express
+│   └── src/
+│       ├── routes/            # prices, negotiate, translate, rag, auth
+│       ├── services/          # PriceService, TranslationService,
+│       │                      # NegotiationService, AIMediationService,
+│       │                      # RAGPipelineService, VectorEmbeddingService
+│       ├── models/            # CropModels, TranslationModels
+│       ├── server/            # Express app setup
+│       └── lambda/            # AWS Lambda handler
+├── aws-deployment/            # CloudFormation templates
+├── docker-compose.yml
+└── nginx/                     # Reverse proxy config
+```
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/v1/prices?crop=` | Get current crop prices |
+| POST | `/api/v1/prices/query` | Advanced price query |
+| GET | `/api/v1/prices/analytics/:crop` | Price analytics and trends |
+| GET | `/api/v1/prices/fair-range/:crop` | Fair price range |
+| POST | `/api/v1/translate` | Translate text between languages |
+| POST | `/api/v1/translate/detect-language` | Detect input language |
+| GET | `/api/v1/translate/languages` | List supported languages |
+| POST | `/api/v1/negotiate/session` | Create negotiation session |
+| POST | `/api/v1/negotiate/session/:id/join` | Join session as buyer |
+| POST | `/api/v1/negotiate/session/:id/message` | Send message |
+| POST | `/api/v1/negotiate/session/:id/generate-suggestions` | AI compromise suggestions |
+| POST | `/api/rag/query` | RAG-based crop query |
+| POST | `/api/rag/search` | Semantic search |
+| GET | `/api/rag/crops` | Available crops and markets |
+
+## Setup
+
+### Prerequisites
+- Node.js v18+
+- Redis (optional, for caching)
+- AWS credentials (for Bedrock AI)
+
+### Docker (Recommended)
 
 ```bash
-# Clone the repository
 git clone https://github.com/HyderabadHustlers/MultilingualMandi.git
 cd MultilingualMandi
-
-# Start with Docker (Recommended)
 docker-compose up -d
+```
 
-# Or start manually
+### Manual Setup
+
+```bash
 npm install
+cd backend && npm install && cd ..
+cd frontend && npm install && cd ..
 npm run dev
-
-# Access the application
-# Frontend: http://localhost:3000
-# Backend API: http://localhost:5000
 ```
 
-## 🚀 Features Delivered
+Frontend: `http://localhost:3000`
+Backend: `http://localhost:5000`
 
-✅ **Telugu→Hindi voice translation** - Real-time AI translation preserving agricultural terms  
-✅ **RAG mandi pricing** - Tomato ₹42/kg, Onion ₹30/kg across 5 markets  
-✅ **AI negotiation chat** - Cross-language mediated negotiations  
-✅ **Mobile PWA** - 2G friendly, voice-enabled interface  
+## Environment Variables
 
-## 🛠️ Production Ready
+Backend (`.env`):
 
-- **Full AWS deployment guide** included
-- **90% test coverage** with property-based testing
-- **Docker + CloudFormation** support
-- **Kiro AI spec-driven** development proof
+```env
+NODE_ENV=development
+PORT=5000
+FRONTEND_URL=http://localhost:3000
 
-## 🏗️ Architecture
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
 
-```mermaid
-graph TB
-    subgraph "Frontend"
-        A[React.js App] --> B[Voice Input]
-        A --> C[Chat Interface]
-        A --> D[Price Dashboard]
-    end
-    
-    subgraph "Backend"
-        E[Express.js API] --> F[WebSocket Server]
-        E --> G[Translation Service]
-        E --> H[Price Service]
-    end
-    
-    subgraph "AI Layer"
-        I[AWS Bedrock] --> J[Claude AI]
-        K[RAG Pipeline] --> L[Vector Embeddings]
-    end
-    
-    subgraph "Data"
-        M[CSV Database] --> N[Market Prices]
-        O[Redis Cache] --> P[Performance]
-    end
-    
-    A --> E
-    G --> I
-    H --> K
-    H --> M
-    E --> O
+BEDROCK_MODEL_ID=anthropic.claude-3-sonnet-20240229-v1:0
+BEDROCK_MAX_TOKENS=4096
+BEDROCK_TEMPERATURE=0.7
+
+REDIS_URL=redis://localhost:6379
+
+JWT_SECRET=your_jwt_secret
+AGMARKNET_API_KEY=
 ```
 
-## 🎬 Demo Scenarios
+## Deployed URL
 
-### Voice Translation Demo
-```
-👤 Farmer (Telugu): "టమాటో రేట్ ఎంత?"
-🤖 AI Translation: "What is the tomato rate?"
-💰 Price Response: "Current tomato prices: ₹42/kg in Hyderabad market"
-```
-
-### Cross-Language Negotiation
-```
-👨‍🌾 Vendor (Hindi): "मैं 100 किलो प्याज ₹32 किलो देता हूं"
-🔄 Translation: "I'll give 100kg onions for ₹32/kg"
-🏪 Buyer (English): "Can you do ₹28/kg?"
-🤖 AI Mediator: "Fair market rate suggests ₹30/kg compromise"
-```
-
-## 🏗️ Tech Stack
-
-**Frontend**: React.js + TypeScript + Material-UI + Web Speech API  
-**Backend**: Node.js + Express + WebSocket + AWS Bedrock  
-**AI**: Claude 3 Sonnet + RAG Pipeline + Vector Embeddings  
-**Data**: CSV Database (75 crops, 5 markets) + Redis Cache  
-**Deploy**: Docker + AWS CloudFormation + Amplify  
-
-## 🚀 Quick Start
-
-```bash
-# Clone repository
-git clone https://github.com/HyderabadHustlers/MultilingualMandi.git
-cd MultilingualMandi
-
-# Start with Docker (Recommended)
-docker-compose up -d
-
-# Access application
-# Frontend: http://localhost:3000
-# Backend API: http://localhost:5000
-```
-
-## 📱 Kiro AI Development Proof
-
-This project was built using **Kiro AI's spec-driven development**:
-
-- **`.kiro/specs/`** - Complete requirements, design, and task specifications
-- **Property-based testing** - 13 correctness properties validated
-- **96.2% test coverage** - 428/445 tests passing
-- **Production ready** - Docker containers and AWS deployment
-
-## 🏆 Hackathon Achievement
-
-**Category**: AI/ML for Social Good  
-**Innovation**: Multilingual AI preserving agricultural terminology  
-**Impact**: Breaking barriers for 600+ million Indian farmers  
-**Technical**: Modern cloud-native architecture with comprehensive testing
-
----
-
-## 👥 Team: HyderabadHustlers
-
-**Built for Hack2skill 2026 - AI for Bharat Flash Sprint**
-
-🚀 **Ready to revolutionize Indian agricultural markets through AI-powered multilingual communication!**
-
-Made with ❤️ in Hyderabad, India | Powered by Kiro AI
+[https://multilingual-mandi.vercel.app](https://multilingual-mandi.vercel.app)
