@@ -19,6 +19,11 @@
     "test:frontend": "cd frontend && npm test",
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
   },
+  "dependencies": {
+    "mongoose": "^8.9.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2"
   },
